@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+p {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 50px;
+  text-align: center;
+}
