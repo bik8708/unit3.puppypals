@@ -1,0 +1,11 @@
+//correct usage for.each:
+
+myArray.forEach(item, (index) => {
+  console.log(item);
+});
+
+//correct usage .filter:
+
+myArray.filter((item, idx) => {
+  return item !== 1;
+});

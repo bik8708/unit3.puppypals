@@ -34,7 +34,7 @@ const carTwo = {
   marketValue: 11000,
   getDescription: function () {
     console.log(
-      `This ${this.year} ${this.color} ${this.make} ${this.model} is only ${this.marketValue}`
+      `This $ {this.year} ${this.color} ${this.make} ${this.model} is only ${this.marketValue}`
     );
   },
 };
