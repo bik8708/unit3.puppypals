@@ -8,10 +8,6 @@ function App() {
   const featuredPup = puppies.find((pup) => pup.id === featPupId);
   console.log(featuredPup);
 
-  function handleClick() {
-    // some logic here
-  }
-
   return (
     <div className="App">
       <h1>Puppy Pals</h1>
@@ -44,3 +40,25 @@ function App() {
 }
 
 export default App;
+
+//Notes: how Byron did it in class
+// return (
+//   <>
+//     <h1>Puppy Pals</h1>
+
+//     {featPupId ? <h2>Info for Puppy with ID {featPupId}</h2> : null}
+
+//     {puppies.map((puppy) => {
+//       return (
+//         <p
+//           key={puppy.id}
+//           onClick={() => {
+//             setFeatPupId(puppy.id);
+//           }}
+//         >
+//           {puppy.name}
+//         </p>
+//       );
+//     })}
+//   </>
+// );
