@@ -1,5 +1,11 @@
+import ContactList from "./components/ContactList";
+
 function App() {
-  return <>APP</>;
+  return (
+    <>
+      <ContactList />
+    </>
+  );
 }
 
 export default App;
