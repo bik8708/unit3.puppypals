@@ -8,7 +8,7 @@ const dummyContacts = [
   { id: 3, name: "BB-8", phone: "888-888-8888", email: "bb8@droids.com" },
 ];
 
-function ContactList() {
+function ContactList({ setFeaturedUser }) {
   const [contacts, setContacts] = useState(dummyContacts);
   console.log("Contacts: ", contacts);
   useEffect(() => {
@@ -19,6 +19,9 @@ function ContactList() {
       })
       .catch((err) => console.error(err));
   }, []);
+
+  if (!contacts.length)
+    return <p style={{ fontSize: "100px", fontWeight: "bold" }}>Loading...</p>;
 
   return (
     <table>
@@ -34,7 +37,11 @@ function ContactList() {
       </thead>
       <tbody></tbody>
       {contacts.map((contact) => (
-        <ContactRow key={contact.id} contact={contact} />
+        <ContactRow
+          key={contact.id}
+          contact={contact}
+          setFeaturedUser={setFeaturedUser}
+        />
       ))}
     </table>
   );
